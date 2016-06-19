@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">2016_software_finalapp</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+    <string-array name="salary_list">
+        <item>not important</item>
+        <item>more than five hundred thousand dollars</item>
+        <item>more than one million dollars</item>
+        <item>more than two million dollars</item>
+        <item>more than three million dollars</item>
+        <item>more than five million dollars</item>
+    </string-array>
+    <string name="spn_salary_list_prompt">對方年收入限制(NTD)</string>
+
+    <string-array name="time_list">
+        <item>any time</item>
+        <item>lunch on weekday</item>
+        <item>dinner on weekday</item>
+        <item>lunch on weekend</item>
+        <item>dinner on weekend</item>
+    </string-array>
+    <string name="spn_time_list_prompt">希望聚餐時間</string>
+
+    <string-array name="locate_list">
+        <item>everywhere</item>
+        <item>Taipei</item>
+        <item>New Taipei</item>
+        <item>Taoyuan</item>
+        <item>Hsinchu</item>
+        <item>Miaoli</item>
+        <item>Taichung</item>
+        <item>Changhua</item>
+        <item>Yunlin</item>
+        <item>Chiayi</item>
+        <item>Tainan</item>
+        <item>Kaohsiung</item>
+        <item>Pingtung</item>
+        <item>Taitung</item>
+        <item>Hualien</item>
+        <item>Ilan</item>
+        <item>Penghu</item>
+        <item>Kinmen</item>
+        <item>Matsu</item>
+
+    </string-array>
+    <string name="spn_locate_list_prompt">希望聚餐地點</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="title_update_location">記事儲存的位置</string>
+    <string name="message_update_location">更新或清除儲存的位置資訊?</string>
+    <string name="update">更新</string>
+    <string name="clear">清除</string>
+     
+    <string name="title_current_location">目前位置</string>
+    <string name="message_current_location">是否儲存目前位置?</string>
+     
+    <string name="google_play_service_missing">裝置沒有安裝Google Play服務</string>
+
+</resources>
