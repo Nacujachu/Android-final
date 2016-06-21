@@ -9,6 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="com.example.chenhaoyun.a2016_software_finalapp.Main3Activity"
     android:weightSum="1">
 
@@ -16,12 +17,25 @@
 
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="30dp"
         android:gravity="center"
-        android:layout_weight="1.35">
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="700px"
+            android:layout_height="600px"
+            android:textSize="24dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:text="
+在哪吃？\n遇見什麼對象？\n聊什麼話題？
+\n我們幫你準備好
+\n聚餐可不是情侶的專利"
+            android:id="@+id/introduce"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +43,7 @@
         android:id="@+id/opentable"
         />
 
-    <Button
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="尋找"

@@ -1,28 +1,19 @@
 package com.example.chenhaoyun.a2016_software_finalapp;
 
-import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private GoogleApiClient googleApiClient;
-    private LocationRequest locationRequest;
-    private Location location;
-    private Marker curMarker , itemMarker;
-
+    private RestData all[] = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +22,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        //r = new RestData();
+        //all = r.setALL();
     }
 
 
@@ -46,22 +39,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
         Bundle bundle = getIntent().getExtras();
-        Double posX = bundle.getDouble("posX");
-        Double posY = bundle.getDouble("posY");
-        LatLng place = new LatLng(posX, posY);
-        mMap.addMarker(new MarkerOptions().position(place).title("Here!!!"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(place));
-        moveMap(place);
+        String Locate_A = bundle.getString("EatLocate");
+        String Locate_B = bundle.getString("SelfLocate");
+      //  RestData r = new RestData();
+        RestData K = new RestData();
+        RestData G = new RestData();
+      //  r = K.find(Locate_A , Locate_B , all);
+        System.out.println(Locate_A);
+        System.out.println(Locate_B);
+        if(all == null) {
+            System.out.println("HIHIHIH");
+            all = K.setALL();
+        }
+        G = K.find(Locate_A , Locate_B , all);
+        System.out.println("Rest Name:"+G.getRestName());
+        LatLng sydney = new LatLng(G.getPosX(), G.getPosY());
+        mMap.addMarker(new MarkerOptions().position(sydney).title( G.getRestName()));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
-
-    // 移動地圖到參數指定的位置
-    private void moveMap(LatLng place) {
-        CameraPosition cameraPosition =
-        new CameraPosition.Builder().target(place).zoom(17).build();
-        mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-    }
-
 }

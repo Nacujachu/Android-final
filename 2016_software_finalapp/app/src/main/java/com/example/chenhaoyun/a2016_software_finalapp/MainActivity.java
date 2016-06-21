@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnLogin,
             btnCreateSql;
 
-    private Button btnMap;
+
     //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +28,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
             btnLogin = (Button)findViewById(R.id.login);
-            btnCreateSql = (Button)findViewById(R.id.create_sql);
-            btnMap = (Button)findViewById(R.id.call_map);
-
+        btnCreateSql = (Button)findViewById(R.id.create_sql);
 
             btnLogin.setOnClickListener(btnLoginOnClick);
             btnCreateSql.setOnClickListener(btnCreateSqlOnClick);
-            btnMap.setOnClickListener(btnMapOnClick);
+
+
 
     }
    private View.OnClickListener btnCreateSqlOnClick = new View.OnClickListener() {
@@ -54,19 +53,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(it);
         }
     };
-
-    private View.OnClickListener btnMapOnClick = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent it = new Intent();
-            Bundle bundle = new Bundle();
-            bundle.putDouble("posX",25.033408);
-            bundle.putDouble("posY",121.564099);
-            it.putExtras(bundle);
-            it.setClass(MainActivity.this, MapsActivity.class);
-            startActivity(it);
-        }
-    };
-
 
 }

@@ -137,6 +137,10 @@ public class Main2Activity extends AppCompatActivity {
 
             final String DROP_TABLE = "DROP TABLE IF EXISTS " + DB_TABLE;
             myUserDb.execSQL(DROP_TABLE);
+            myUserDb.execSQL("DROP TABLE IF EXISTS " + "gender");
+            myUserDb.execSQL("DROP TABLE IF EXISTS " + "age");
+            myUserDb.execSQL("DROP TABLE IF EXISTS " + "time");
+            myUserDb.execSQL("DROP TABLE IF EXISTS " + "locate");
             //   myUserDb.close();
         }
 
@@ -160,6 +164,7 @@ public class Main2Activity extends AppCompatActivity {
                             "locate TEXT," +
                             "salary TEXT);");
                 }
+
                 cursor.close();
             }
             Cursor c = myUserDb.query(true, DB_TABLE, new String[]{"name", "gender", "age", "time", "locate", "salary"}, null, null, null, null, null, null);
@@ -208,15 +213,15 @@ public class Main2Activity extends AppCompatActivity {
     };
 
     private AdapterView.OnItemSelectedListener spnLocateOnItemSelected = new AdapterView.OnItemSelectedListener() {
-        @Override
-        public void onItemSelected(AdapterView parent, View view, int i, long l) {
-            msLocate = parent.getSelectedItem().toString();
-        }
+            @Override
+            public void onItemSelected(AdapterView parent, View view, int i, long l) {
+                msLocate = parent.getSelectedItem().toString();
+            }
 
-        @Override
-        public void onNothingSelected(AdapterView<?> adapterView) {
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
-        }
+            }
     };
 
 }

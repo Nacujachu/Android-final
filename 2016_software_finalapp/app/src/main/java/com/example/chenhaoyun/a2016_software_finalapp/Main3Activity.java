@@ -10,8 +10,9 @@ import android.widget.Button;
 
 public class Main3Activity extends AppCompatActivity {
 
-        private Button btnOpenTable;
+    private Button btnOpenTable;
        private Button btnFindList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
