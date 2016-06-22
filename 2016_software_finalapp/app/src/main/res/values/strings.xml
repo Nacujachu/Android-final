@@ -11,9 +11,10 @@
         <item>more than five million dollars</item>
     </string-array>
     <string name="spn_salary_list_prompt">對方年收入限制(NTD)</string>
+    <string name="facebook_app_id">109136169516521</string>
+
 
     <string-array name="time_list">
-        <item>any time</item>
         <item>lunch on weekday</item>
         <item>dinner on weekday</item>
         <item>lunch on weekend</item>
@@ -22,7 +23,6 @@
     <string name="spn_time_list_prompt">希望聚餐時間</string>
 
     <string-array name="locate_list">
-        <item>everywhere</item>
         <item>Taipei</item>
         <item>New Taipei</item>
         <item>Taoyuan</item>
@@ -45,6 +45,7 @@
     </string-array>
     <string name="spn_locate_list_prompt">希望聚餐地點</string>
     <string name="title_activity_maps">Map</string>
+    <string name="jia">Jia ㄅㄥ</string>
 
 
 </resources>

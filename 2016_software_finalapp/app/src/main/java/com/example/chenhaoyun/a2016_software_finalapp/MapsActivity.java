@@ -49,11 +49,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         System.out.println(Locate_A);
         System.out.println(Locate_B);
         if(all == null) {
-            System.out.println("HIHIHIH");
+          //  System.out.println("HIHIHIH");
             all = K.setALL();
         }
         G = K.find(Locate_A , Locate_B , all);
-        System.out.println("Rest Name:"+G.getRestName());
+      //  System.out.println("Rest Name:"+G.getRestName());
         LatLng sydney = new LatLng(G.getPosX(), G.getPosY());
         mMap.addMarker(new MarkerOptions().position(sydney).title( G.getRestName()));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));

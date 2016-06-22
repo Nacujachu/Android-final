@@ -62,7 +62,7 @@ public class RestData {
         int i;
         RestData not_found = new RestData("QQ","QQ","QQ",25.111111,121.422222);
         for(RestData R : all){
-            System.out.println("Rest finder  " +R.getLocate() + "   " + R.getLocate2());
+        //    System.out.println("Rest finder  " +R.getLocate() + "   " + R.getLocate2());
             if( (R.Locate.equals(A) && R.Locate2.equals(B) )||(R.Locate2.equals(A) && R.Locate.equals(B)) ){
                 return R;
             }

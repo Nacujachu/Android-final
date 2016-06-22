@@ -7,18 +7,21 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/back_on"
     tools:context="com.example.chenhaoyun.a2016_software_finalapp.Main2Activity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="約吃飯"
+        android:text="@string/jia"
         android:id="@+id/textView"
-        android:textSize="28dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp" />
+        android:textSize="36sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:textColor="@color/colorPrimaryDark" />
+
 
     <LinearLayout
         android:orientation="horizontal"
@@ -28,6 +31,12 @@
         android:layout_centerHorizontal="true"
         android:gravity="center">
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"></LinearLayout>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,6 +44,24 @@
             android:id="@+id/login"
             android:layout_marginTop="20dp"
             android:layout_gravity="center_vertical" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:layout_gravity="bottom"
+            android:id="@+id/share_app"
+            android:clickable="false"
+            android:contextClickable="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FbLogin"
+            android:id="@+id/Fblogin"
+            android:layout_gravity="bottom" />
 
         <Button
             android:layout_width="wrap_content"
